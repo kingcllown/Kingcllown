@@ -1,0 +1,52 @@
+# Intent Definitions
+# Turkish language patterns and intent routing
+
+intents:
+  # App launching
+  app_launch:
+    patterns:
+      - "[aç|başlat|kapat] {app_name}"
+      - "{app_name} aç"
+      - "{app_name} başlat"
+    skill: system_skill
+    action: launch_app
+    parameters:
+      - app_name
+
+  # App killing
+  app_kill:
+    patterns:
+      - "{app_name} kapat"
+      - "{app_name} kapat"
+      - "{app_name} sonlandır"
+    skill: system_skill
+    action: kill_app
+    parameters:
+      - app_name
+
+  # Volume control
+  set_volume:
+    patterns:
+      - "ses [seviyesi|düzeyi] {level}"
+      - "volume {level}"
+      - "sesi {level} yap"
+    skill: system_skill
+    action: set_volume
+    parameters:
+      - level
+
+  get_volume:
+    patterns:
+      - "ses [seviyesi|düzeyi] nedir"
+      - "volume [level|nedir]"
+    skill: system_skill
+    action: get_volume
+
+  # System info
+  system_stats:
+    patterns:
+      - "sistem [bilgisi|durumu] nedir"
+      - "cpu ram disk"
+      - "sistem performansı"
+    skill: system_skill
+    action: get_system_stats

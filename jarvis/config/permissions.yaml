@@ -1,0 +1,11 @@
+# Permission Configuration
+# Set to true to allow, false to deny
+
+permissions:
+  app_launch: true
+  app_kill: true
+  volume_control: true
+  system_diagnostics: true
+  file_operations: false  # Disabled by default for security
+  screenshot: false
+  keystroke_recording: false

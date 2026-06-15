@@ -1,0 +1,28 @@
+# Jarvis Default Configuration
+
+config:
+  app_name: Jarvis
+  debug: false
+  log_level: INFO
+
+  # Speech settings
+  stt_provider: google  # google, azure, offline
+  tts_provider: pyttsx3  # google, azure, pyttsx3
+  language: tr-TR
+  speech_timeout: 10.0
+
+  # NLU settings
+  use_local_llm: false
+  llm_api_url: null
+  llm_model: null
+  intent_confidence_threshold: 0.7
+
+  # OS Control
+  enable_app_control: true
+  enable_volume_control: true
+  enable_system_diagnostics: true
+  enable_file_operations: false
+
+  # Plugins
+  plugin_directory: jarvis/plugins/builtin
+  auto_load_plugins: true
